@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get a Quote — Northbridge Logistics</title>
+  <meta name="description" content="Request a freight quote from Northbridge Logistics. Full truckload, LTL, warehousing, expedited and last-mile — most estimates returned within one business hour.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="topbar">
+    <div class="container">
+      <p class="topbar-note">Owner-operated · Serving the Midwest &amp; Plains since 2009</p>
+      <div class="topbar-right">
+        <span class="topbar-region">Dispatching Mon–Sat · 6am–6pm CT</span>
+        <a class="tel" href="tel:+13125550117">(312) 555-0117</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Northbridge Logistics — home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+        </span>
+        <span class="brand-name">Northbridge<span class="brand-sub">Logistics</span></span>
+      </a>
+      <nav id="nav-links" class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="quote.html" aria-current="page">Get a quote</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="crumb"><a href="index.html">Home</a> / Get a quote</p>
+        <h1 class="display">Get a quote in minutes.</h1>
+        <p class="lead">Three quick steps. A real number, from a real dispatcher, typically within one business hour.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="quote-layout">
+          <!-- wizard -->
+          <div class="card" style="padding:clamp(24px,3vw,40px)" id="quote-wizard">
+            <form id="quote-form" novalidate>
+              <div class="wizard-head" aria-label="Quote progress">
+                <div class="wizard-step active"><span class="ws-num">1</span><span class="ws-label">Contact</span></div>
+                <div class="wizard-step"><span class="ws-num">2</span><span class="ws-label">Shipment</span></div>
+                <div class="wizard-step"><span class="ws-num">3</span><span class="ws-label">Review</span></div>
+              </div>
+
+              <div class="wizard-pane active" data-pane="0">
+                <h3 style="font-size:24px">Tell us who to reach.</h3>
+                <p class="muted" style="margin-bottom:24px">Your dispatcher uses this for the written quote — everything else is one call away.</p>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="fname">First name <span class="req" aria-hidden="true">*</span></label>
+                    <input id="fname" name="fname" type="text" autocomplete="given-name" required data-required>
+                    <span class="error-msg">Please enter your first name.</span>
+                  </div>
+                  <div class="field">
+                    <label for="lname">Last name <span class="req" aria-hidden="true">*</span></label>
+                    <input id="lname" name="lname" type="text" autocomplete="family-name" required data-required>
+                    <span class="error-msg">Please enter your last name.</span>
+                  </div>
+                  <div class="field">
+                    <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" required data-required placeholder="you@company.com">
+                    <span class="error-msg">Enter a valid email address.</span>
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone <span class="hint">(optional)</span></label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" data-required placeholder="(312) 555-0100">
+                    <span class="error-msg">Enter a phone number or leave blank.</span>
+                  </div>
+                  <div class="field full">
+                    <label for="company">Company <span class="hint">(optional)</span></label>
+                    <input id="company" name="company" type="text" autocomplete="organization" placeholder="Acme Corp">
+                  </div>
+                </div>
+              </div>
+
+              <div class="wizard-pane" data-pane="1" hidden>
+                <h3 style="font-size:24px">Describe the shipment.</h3>
+                <p class="muted" style="margin-bottom:24px">Approximate is fine — a dispatcher confirms the details before anything rolls.</p>
+                <div class="field" id="field-service">
+                  <fieldset style="border:0;padding:0;margin:0 0 20px">
+                    <legend style="font-weight:600;font-size:15px;margin-bottom:12px;padding:0">What are you moving? <span class="req" aria-hidden="true">*</span></legend>
+                    <div class="radio-group">
+                      <label class="radio-card">
+                        <input id="svc-ftl" type="radio" name="service" value="Full Truckload" required data-required>
+                        <span class="rc-label"><strong>Full Truckload</strong><span>Full trailer, door to door</span></span>
+                      </label>
+                      <label class="radio-card">
+                        <input id="svc-ltl" type="radio" name="service" value="Less-than-truckload" data-required>
+                        <span class="rc-label"><strong>LTL / Partial</strong><span>Pallets sharing trailer space</span></span>
+                      </label>
+                      <label class="radio-card">
+                        <input id="svc-warehousing" type="radio" name="service" value="Warehousing" data-required>
+                        <span class="rc-label"><strong>Warehousing</strong><span>Storage, cross-dock, pick &amp; pack</span></span>
+                      </label>
+                      <label class="radio-card">
+                        <input id="svc-expedited" type="radio" name="service" value="Expedited" data-required>
+                        <span class="rc-label"><strong>Expedited</strong><span>Same-day / rush handling</span></span>
+                      </label>
+                      <label class="radio-card">
+                        <input id="svc-last-mile" type="radio" name="service" value="Last-mile" data-required>
+                        <span class="rc-label"><strong>Last-mile</strong><span>Van delivery to a store or door</span></span>
+                      </label>
+                    </div>
+                    <div class="form-errors-summary" role="status"></div>
+                  </fieldset>
+                </div>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="origin">Pickup city &amp; state <span class="req" aria-hidden="true">*</span></label>
+                    <input id="origin" name="origin" type="text" autocomplete="address-level2" required data-required placeholder="Chicago, IL">
+                    <span class="error-msg">Enter a pickup city and state.</span>
+                  </div>
+                  <div class="field">
+                    <label for="destination">Delivery city &amp; state <span class="req" aria-hidden="true">*</span></label>
+                    <input id="destination" name="destination" type="text" autocomplete="address-level2" required data-required placeholder="Indianapolis, IN">
+                    <span class="error-msg">Enter a delivery city and state.</span>
+                  </div>
+                  <div class="field">
+                    <label for="pickup">Earliest pickup date</label>
+                    <input id="pickup" name="pickup" type="date">
+                  </div>
+                  <div class="field">
+                    <label for="weight">Approx. weight (lb) <span class="req" aria-hidden="true">*</span></label>
+                    <input id="weight" name="weight" type="number" min="1" step="1" inputmode="numeric" required data-required placeholder="12000">
+                    <span class="error-msg">Enter an approximate weight.</span>
+                  </div>
+                  <div class="field">
+                    <label for="field-density">Freight density</label>
+                    <select id="field-density" name="density">
+                      <option value="Standard">Standard palletized freight</option>
+                      <option value="Stackable">Stackable pallets</option>
+                      <option value="Non-stackable">Fragile / non-stackable</option>
+                      <option value="Over-dimensional">Over-dimensional</option>
+                    </select>
+                  </div>
+                  <div class="field" id="field-measure" hidden>
+                    <label for="measure">Dimensions or unit count</label>
+                    <input id="measure" name="measure" type="text" placeholder="e.g. 4 pallets, 48×40×60 in">
+                    <span class="hint">Shown for full-load and expedited quotes.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wizard-pane" data-pane="2" hidden>
+                <h3 style="font-size:24px" id="quote-review-title">Review &amp; confirm.</h3>
+                <p class="muted" style="margin-bottom:24px">Submit and a dispatcher will email your written quote. We build an indicative estimate here so you're never left guessing.</p>
+                <div id="summary-body" aria-live="polite"></div>
+              </div>
+
+              <div class="wizard-nav">
+                <button class="btn btn-ghost" type="button" data-step="back" hidden>← Back</button>
+                <button class="btn btn-accent" type="button" data-step="next">Continue</button>
+              </div>
+            </form>
+
+            <div id="quote-success" class="success-panel" style="display:none">
+              <div class="check" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="11" fill="#1f7a4d"/>
+                  <path d="m7.5 12.5 3 3 6-6.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h2 class="display-2">Request received.</h2>
+              <p class="lead">Thanks — your details are with dispatch. Expect a written quote by email within one business hour.</p>
+              <p><a class="btn btn-primary" href="index.html">Back to home</a></p>
+            </div>
+          </div>
+
+          <!-- aside -->
+          <aside>
+            <div class="card" data-reveal>
+              <h3 style="font-size:20px">What happens next</h3>
+              <ol class="checklist" style="margin-bottom:8px">
+                <li><strong>A dispatcher reviews</strong> your load details within the hour.</li>
+                <li><strong>You get a binding rate</strong> by email, not a "from" range.</li>
+                <li><strong>We hold the equipment</strong> the moment you confirm.</li>
+              </ol>
+            </div>
+            <div class="card" data-reveal style="--reveal-delay:90ms;margin-top:20px">
+              <h3 style="font-size:20px">Prefer to talk it through?</h3>
+              <p class="muted">Call dispatch directly — the same owners who run the fleet answer the line.</p>
+              <p style="margin:14px 0 4px"><a href="tel:+13125550117" style="font-weight:700;font-size:20px;font-family:var(--font-d)">(312) 555-0117</a></p>
+              <p class="muted" style="font-size:15px">Mon–Sat · 6am–6pm CT<br>dispatch@northbridgeltd.example</p>
+              <p style="margin-bottom:0"><a class="btn btn-ghost btn-sm" href="contact.html">Full contact page</a></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <p class="eyebrow">Before you ask</p>
+          <h2 class="display-2">Quick answers on quoting.</h2>
+        </div>
+        <div class="accordion" data-reveal>
+          <div class="accordion-item open">
+            <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="faq1">
+              How fast is a real quote?
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="faq1" role="region">
+              <div class="accordion-panel-inner"><p>Most lanes get a written, binding quote within one business hour. Complex or over-dimensional loads may take until end of day — we'll tell you on the call.</p></div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq2">
+              Is the estimate on this page guaranteed?
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="faq2" role="region">
+              <div class="accordion-panel-inner"><p>The number shown is indicative. Your dispatcher confirms the binding rate after reviewing weight, equipment, and margins — what you lock in is what you pay.</p></div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq3">
+              Do you cover my lane?
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="accordion-panel" id="faq3" role="region">
+              <div class="accordion-panel-inner"><p>We run scheduled lanes across 12 Midwest and Plains states. Outside that, we partner with vetted owner-operators — and we'll say so plainly on the quote.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a class="brand" href="index.html" aria-label="Northbridge Logistics — home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+            </span>
+            <span class="brand-name">Northbridge<span class="brand-sub">Logistics</span></span>
+          </a>
+          <p>Owner-operated freight, warehousing, and last-mile delivery across the Midwest and Plains.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="fleet.html">Fleet</a></li>
+            <li><a href="quote.html">Get a quote</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#ftl">Full Truckload</a></li>
+            <li><a href="services.html#ltl">Less-than-Truckload</a></li>
+            <li><a href="services.html#warehousing">Warehousing</a></li>
+            <li><a href="services.html#expedited">Expedited</a></li>
+            <li><a href="services.html#intermodal">Intermodal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Dispatch</h4>
+          <ul>
+            <li><a href="tel:+13125550117">(312) 555-0117</a></li>
+            <li><a href="mailto:dispatch@northbridgeltd.example">dispatch@northbridgeltd.example</a></li>
+            <li>4820 W Division St<br>Chicago, IL 60651</li>
+            <li>Mon–Sat · 6am–6pm CT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Northbridge Logistics LLC — demo site for a sample company.</p>
+        <p class="credit-note">Photographs via Wikimedia Commons under CC BY / CC BY-SA 3.0–4.0 licenses. See <a href="CREDITS.md">CREDITS.md</a> for full attribution.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
