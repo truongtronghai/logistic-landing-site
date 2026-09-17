@@ -89,69 +89,8 @@
 
     <section style="padding-top:0">
       <div class="container">
-        <div class="quote-layout">
-          <!-- form -->
-          <div class="card" style="padding:clamp(24px,3vw,40px)">
-            <div id="contact-form-wrap">
-              <p class="eyebrow">Write to us</p>
-              <h2 class="display-2" style="font-size:clamp(26px,3vw,34px)">Send a message.</h2>
-              <p class="muted" style="margin-bottom:26px">Questions, billing, or a lane we didn't mention — we answer every message same day.</p>
-              <form id="contact-form" data-validate novalidate>
-                <div class="form-errors-summary" role="status"></div>
-                <div class="form-grid">
-                  <div class="field">
-                    <label for="cf-name">Your name <span class="req" aria-hidden="true">*</span></label>
-                    <input id="cf-name" name="name" type="text" autocomplete="name" required data-required>
-                    <span class="error-msg">Please enter your name.</span>
-                  </div>
-                  <div class="field">
-                    <label for="cf-email">Email <span class="req" aria-hidden="true">*</span></label>
-                    <input id="cf-email" name="email" type="email" autocomplete="email" required data-required placeholder="you@company.com">
-                    <span class="error-msg">Enter a valid email address.</span>
-                  </div>
-                  <div class="field">
-                    <label for="cf-company">Company <span class="hint">(optional)</span></label>
-                    <input id="cf-company" name="company" type="text" autocomplete="organization">
-                  </div>
-                  <div class="field">
-                    <label for="cf-subject">Topic <span class="req" aria-hidden="true">*</span></label>
-                    <select id="cf-subject" name="subject" required data-required>
-                      <option value="">Choose a topic…</option>
-                      <option>Freight quote or booking</option>
-                      <option>Warehousing &amp; storage</option>
-                      <option>Billing or invoicing</option>
-                      <option>Driver / fleet inquiries</option>
-                      <option>Something else</option>
-                    </select>
-                    <span class="error-msg">Please choose a topic.</span>
-                  </div>
-                  <div class="field full">
-                    <label for="cf-message">Message <span class="req" aria-hidden="true">*</span></label>
-                    <textarea id="cf-message" name="message" required data-required minlength="10" placeholder="Tell us what you need…"></textarea>
-                    <span class="error-msg">Please add a little more detail (at least 10 characters).</span>
-                  </div>
-                </div>
-                <p style="margin:24px 0 0">
-                  <button class="btn btn-accent btn-lg" type="submit">Send message</button>
-                </p>
-              </form>
-            </div>
-            <div id="contact-success" class="success-panel" style="display:none">
-              <div class="check" aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                  <circle cx="12" cy="12" r="11" fill="#1f7a4d"/>
-                  <path d="m7.5 12.5 3 3 6-6.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <h2 class="display-2">Message received.</h2>
-              <p class="lead">Thanks — a real person will reply during dispatch hours, usually within the hour.</p>
-              <p><a class="btn btn-primary" href="index.html">Back to home</a></p>
-            </div>
-          </div>
-
-          <!-- aside -->
-          <aside>
-            <div class="card" data-reveal>
+        <aside>
+          <div class="card" data-reveal>
               <h3 style="font-size:20px">Dispatch hours</h3>
               <ul class="checklist" style="margin-bottom:0">
                 <li><strong>Mon–Fri</strong> · 6am–6pm CT</li>
@@ -170,7 +109,6 @@
               <p class="muted" style="margin-bottom:0;font-size:14px">Warehouse cross-dock available by appointment Mon–Sat.</p>
             </div>
           </aside>
-        </div>
       </div>
     </section>
 
